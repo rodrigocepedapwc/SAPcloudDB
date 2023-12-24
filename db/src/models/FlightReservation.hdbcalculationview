@@ -40,6 +40,10 @@
       <descriptions defaultDescription="Airline"/>
       <keyMapping columnObjectName="Reservations" columnName="Airline"/>
     </attribute>
+    <attribute id="CARRID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CARRID"/>
+      <keyMapping columnObjectName="Reservations" columnName="CARRID"/>
+    </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures/>
