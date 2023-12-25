@@ -1,0 +1,55 @@
+{ 
+  "format_version": 1, 
+  "imports": [
+    { 
+        "target_table": "PASSENGERS", 
+        "source_data": { 
+            "data_type": "CSV", 
+            "file_name": "passengers.csv", 
+            "has_header": false, 
+            "dialect": "HANA", 
+            "type_config": { 
+            "delimiter": "," 
+        } 
+     }, 
+     "import_settings": { 
+        "include_filter" : [ ], 
+        "import_columns": ["PASSENGERID","NAME","ACTIVE","ADDRESS","COUNTRY","PASSPORT","PASSENGERPRIORITYSTATUS"] 
+     }, 
+     "column_mappings": { 
+        "PASSENGERID": 1, 
+        "NAME": 2, 
+        "ACTIVE": 3, 
+        "ADDRESS": 4, 
+        "COUNTRY": 5, 
+        "PASSPORT": 6,
+        "PASSENGERPRIORITYSTATUS":7 
+     } 
+  }, 
+  { 
+     "target_table": "FLIGHTRESERVATION", 
+     "source_data": { 
+        "data_type": "CSV", 
+        "file_name": "flightreservation.csv", 
+        "has_header": false, 
+        "dialect": "HANA", 
+        "type_config": { 
+          "delimiter": "," 
+        } 
+     }, 
+     "import_settings": { 
+        "include_filter" : [ ], 
+        "import_columns": ["RESERVATIONID","PASSENGERID","MANDT","CARRID","CONNID","FLDATE","SEAT","BOOKINGTIME" ] 
+     }, 
+     "column_mappings": { 
+        "RESERVATIONID": 1, 
+        "PASSENGERID" : 2, 
+        "MANDT": 3,      
+        "CARRID": 4,      
+        "CONNID": 5, 
+        "FLDATE": 6,      
+        "SEAT" : 7 , 
+        "BOOKINGTIME" : 8 
+     } 
+  }] 
+} 
